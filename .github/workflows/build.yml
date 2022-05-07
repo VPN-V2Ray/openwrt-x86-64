@@ -17,7 +17,7 @@ env:
 
 jobs:
   build:
-    name: "Build OpenWrt docker image"
+    name: "Build OpenWrt Docker image"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,7 +28,7 @@ jobs:
           wget $FIRMWARE_URL -O openwrt.tar.gz
 
       - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v4
         env:
           FIRMWARE: openwrt.tar.gz
         with:
