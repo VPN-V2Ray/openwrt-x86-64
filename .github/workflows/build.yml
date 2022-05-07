@@ -12,7 +12,7 @@ on:
 env:
   FIRMWARE_URL: "https://downloads.openwrt.org/releases/21.02.3/targets/armvirt/32/openwrt-21.02.3-armvirt-32-default-rootfs.tar.gz"
   #FIRMWARE_URL: "https://downloads.openwrt.org/releases/19.07.2/targets/x86/64/openwrt-19.07.2-x86-64-generic-rootfs.tar.gz"
-  REPOSITORY: VPN-V2Ray/openwrt-x86-64
+  REPOSITORY: nanopi/openwrt-x86
   TAG: 21.02.3
 
 jobs:
