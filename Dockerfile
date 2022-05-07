@@ -1,7 +1,7 @@
 FROM scratch
 
-LABEL maintainer=Crazygit
-LABEL homepage="https://github.com/crazygit/openwrt-x86-64"
+LABEL maintainer=nanopi
+LABEL homepage="https://github.com/VPN-V2Ray/openwrt-x86-64"
 
 ARG FIRMWARE
 # FIRMWARE 使用远程的URL地址的.tar.gz包时不会自动解压，因此只能添加本地文件
