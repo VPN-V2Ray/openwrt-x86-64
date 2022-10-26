@@ -1,4 +1,5 @@
-name: Build OpenWrt Docker x86-64 image
+name: Build OpenWrt Docker x86 image
+##name: Build OpenWrt Docker x86-64 image
 
 on:
   repository_dispatch:
