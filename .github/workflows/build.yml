@@ -20,8 +20,11 @@ env:
   FIRMWARE_URL: "https://downloads.openwrt.org/releases/22.03.2/targets/x86/generic/openwrt-22.03.2-x86-generic-generic-ext4-rootfs.img.gz"
   #FIRMWARE_URL: "https://downloads.openwrt.org/releases/21.02.3/targets/x86/generic/openwrt-21.02.3-x86-generic-generic-ext4-rootfs.img.gz"
   #FIRMWARE_URL: "https://downloads.openwrt.org/releases/19.07.2/targets/x86/64/openwrt-19.07.2-x86-64-generic-rootfs.tar.gz"
-  REPOSITORY: tonycn/openwrt-x86
-  TAG: latest
+  #REPOSITORY: tonycn/openwrt-x86
+  #TAG: latest
+  REPOSITORY: nanopi/openwrt-x86
+  TAG: 2023
+
 
 jobs:
   build:
@@ -44,4 +47,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
           buildargs: FIRMWARE
-          tags: "latest,${{ env.TAG }}"
+          tags: "2023,${{ env.TAG }}"
+          #tags: "latest,${{ env.TAG }}"
