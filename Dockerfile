@@ -3,7 +3,7 @@ FROM scratch
 LABEL maintainer=openwrt-x86
 LABEL maintainer="Tony <https://t.me/tony_cn>"
 LABEL maintainer="Tony <Tony-CN@outlook.com>"
-LABEL homepage="https://github.com/VPN-V2Ray/openwrt-x86-64"
+#LABEL homepage="https://github.com/VPN-V2Ray/openwrt-x86-64"
 #LABEL homepage="https://github.com/nanopi/openwrt-x86"
 
 ARG FIRMWARE
