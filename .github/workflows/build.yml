@@ -17,7 +17,9 @@ on:
   #TAG: 21.02.3
   
 env:
-  FIRMWARE_URL: "https://downloads.openwrt.org/releases/22.03.2/targets/x86/generic/openwrt-22.03.2-x86-generic-generic-ext4-rootfs.img.gz"
+  FIRMWARE_URL: "https://www.gargoyle-router.com/downloads/images/x86/gargoyle_1.14.0-x86-64-generic-rootfs.tar.gz"
+  #FIRMWARE_URL: "https://www.gargoyle-router.com/downloads/images/x86/gargoyle_1.14.0-x86-generic-generic-rootfs.tar.gz"
+  #FIRMWARE_URL: "https://downloads.openwrt.org/releases/22.03.2/targets/x86/generic/openwrt-22.03.2-x86-generic-generic-ext4-rootfs.img.gz"
   #FIRMWARE_URL: "https://downloads.openwrt.org/releases/21.02.3/targets/x86/generic/openwrt-21.02.3-x86-generic-generic-ext4-rootfs.img.gz"
   #FIRMWARE_URL: "https://downloads.openwrt.org/releases/19.07.2/targets/x86/64/openwrt-19.07.2-x86-64-generic-rootfs.tar.gz"
   #REPOSITORY: tonycn/openwrt-x86
@@ -32,14 +34,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
-
+        uses: actions/checkout@v3
+        #uses: actions/checkout@master
+        
       - name: Download Firmware
         run: |
           wget $FIRMWARE_URL -O openwrt.tar.gz
 
       - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@v4
+        uses: elgohr/Publish-Docker-Github-Action@v5
         env:
           FIRMWARE: openwrt.tar.gz
         with:
